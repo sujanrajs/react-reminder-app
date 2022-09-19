@@ -29,7 +29,11 @@ const App = () => {
   return (
     <div>
       <Header title="Reminder App" />
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} />
+      ) : (
+        "No tasks to Show"
+      )}
     </div>
   );
 };
