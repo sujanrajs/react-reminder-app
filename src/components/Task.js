@@ -1,8 +1,11 @@
 import { MdCancel } from "react-icons/md";
 
-const Task = ({ task, onDelete }) => {
+const Task = ({ task, onDelete, onToggle }) => {
   return (
-    <div>
+    <div
+      className={`task ${task.reminder ? 'reminder' : ''}`}
+      onDoubleClick={() => onToggle(task.id)}
+    >
       <h3>
         {task.title}
         <MdCancel
