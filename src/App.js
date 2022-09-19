@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import AddTask from "./components/AddTask";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
@@ -38,6 +39,7 @@ const App = () => {
   return (
     <div>
       <Header title="Reminder App" />
+      <AddTask />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
