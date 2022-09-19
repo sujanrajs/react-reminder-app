@@ -17,6 +17,18 @@
       "title": "Team Meeting",
       "day": "Jan 6th at 12:30pm",
       "reminder": "false"
+    },
+    {
+      "text": "test",
+      "day": "test",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "test2",
+      "day": "test2",
+      "reminder": false,
+      "id": 5
     }
   ]
 }
