@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
 const App = () => {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -76,8 +77,11 @@ const App = () => {
 
   return (
     <div>
-      <Header title="Reminder App" />
-      <AddTask onAdd={addTask} />
+      <Header
+        onAddBtn={() => setShowAddTask(!showAddTask)}
+        title="Reminder App"
+      />
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
