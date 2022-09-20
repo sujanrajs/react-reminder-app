@@ -78,8 +78,9 @@ const App = () => {
   return (
     <div>
       <Header
-        onAddBtn={() => setShowAddTask(!showAddTask)}
         title="Reminder App"
+        onAddBtn={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
       />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
