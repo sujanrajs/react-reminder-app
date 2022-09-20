@@ -80,7 +80,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="container">
         <Header
           title="Reminder App"
           onAddBtn={() => setShowAddTask(!showAddTask)}
@@ -99,7 +99,9 @@ const App = () => {
                     onToggle={toggleReminder}
                   />
                 ) : (
-                  "No tasks to Show"
+                  <div className="empty-container">
+                    <h3> Sorry! No tasks to Show</h3>
+                  </div>
                 )}
               </>
             }
