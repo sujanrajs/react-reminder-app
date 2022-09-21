@@ -3,8 +3,8 @@ import AddTask from "../components/AddTask";
 import Header from "../components/Header";
 import Tasks from "../components/Tasks";
 
-//const HerokuUrl = `https://reminder-json-server.herokuapp.com/tasks`;
-const LocalUrl = `http://localhost:5000/tasks`;
+const HerokuUrl = `https://reminder-json-server.herokuapp.com/tasks`;
+// const LocalUrl = `http://localhost:5000/tasks`;
 
 const Home = () => {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -20,14 +20,14 @@ const Home = () => {
 
   // Fetch tasks
   const fetchTasks = async () => {
-    const res = await fetch(LocalUrl);
+    const res = await fetch(HerokuUrl);
     const data = await res.json();
     return data;
   };
 
   // Add task
   const addTask = async (task) => {
-    const res = await fetch(LocalUrl, {
+    const res = await fetch(HerokuUrl, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -40,7 +40,7 @@ const Home = () => {
 
   // Delete task
   const deleteTask = async (id) => {
-    await fetch(`${LocalUrl}/${id}`, {
+    await fetch(`${HerokuUrl}/${id}`, {
       method: "DELETE",
     });
 
@@ -49,7 +49,7 @@ const Home = () => {
 
   // Fetch task and toggle Reminder
   const fetchTask = async (id) => {
-    const res = await fetch(`${LocalUrl}/${id}`);
+    const res = await fetch(`${HerokuUrl}/${id}`);
     const data = await res.json();
     return data;
   };
@@ -61,7 +61,7 @@ const Home = () => {
       reminder: !taskToToggle.reminder,
     };
 
-    const res = await fetch(`${LocalUrl}/${id}`, {
+    const res = await fetch(`${HerokuUrl}/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

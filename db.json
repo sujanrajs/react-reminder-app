@@ -2,21 +2,27 @@
   "tasks": [
     {
       "id": 1,
-      "title": "Doctor Appointment",
-      "day": "Jan 3rd 2022 at 12:30",
+      "title": "Doctor's Appointment",
+      "day": "Jan 3rd 2022 at 11:00",
       "reminder": false
     },
     {
       "id": 2,
       "title": "Teacher Appointment",
-      "day": "Jan 4th 2022 at 16:30",
-      "reminder": true
+      "day": "Jan 4th 2022 at 12:30",
+      "reminder": false
     },
     {
+      "id": 3,
       "title": "Team Meeting",
-      "day": "Jan 5th 2022 at 11:00",
+      "day": "Jan 6th 2022 at 16:00",
+      "reminder": false
+    },
+    {
+      "title": "Interview at Helsinki",
+      "day": "Jan 10th 2022 at 10:00",
       "reminder": true,
-      "id": 3
+      "id": 4
     }
   ]
 }
