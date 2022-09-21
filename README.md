@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## React Reminder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project was build using React | JSON Server deployed in Heroku
 
-## Available Scripts
+## Plese, [Click Here](https://sujanrajs-reminder-app.netlify.app/) for live demo - FrontEnd
 
-In the project directory, you can run:
+## [Click Here](https://reminder-json-server.herokuapp.com/tasks) for API - JSON server deployed in Heroku
 
-### `npm start`
+### Project features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### - Add-Button opens the form to add reminder task..
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### - Close-button closes the form..
 
-### `npm test`
+### - User can view previous tasks just below the form or below header when form is close..
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### - User can input reminder task Name, Date & Time manually..
 
-### `npm run build`
+### - User can mark the set-reminder check-box (checked box highlights the task box with white border, unchecked leaves it without highlight)..
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### - Save task-Button saves the input task, date and time..
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### - User can toggle marking the reminder by double clicking above the task title itself..
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### - Leaving empty input field alerts user to fill the inputs..
 
-### `npm run eject`
+### - Cross-Icon-Button deletes the reminder..
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Project Execution:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### - After the project is cloned..
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### - To execute locally go to: root-folder/src/pages/Home.js
 
-## Learn More
+### - Comment the line like given below in that folder, because this link is for json server deployed in heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    const HerokuUrl = `https://reminder-json-server.herokuapp.com/tasks`;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### - And uncomment the line like given below in that folder, because this link is for local json server
 
-### Code Splitting
+    const LocalUrl = `http://localhost:5000/tasks`;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### - In the same folder mentioned above, after that line replace all the `HerokuUrl` by `LocalUrl`
 
-### Analyzing the Bundle Size
+### - Install all the dependencies using command `npm install` in the root folder..
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### - Run command `npm run server` which runs json server in port: 5000..
 
-### Making a Progressive Web App
+### - API end point will be `http://localhost:5000/tasks`..
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### - Run command `npm start` after json server starts on above link mentioned..
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### - Frontend runs on port: 3000 such as `http://localhost:3000/`
