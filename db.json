@@ -3,14 +3,20 @@
     {
       "id": 1,
       "title": "Doctor Appointment",
-      "day": "Jan 3rd at 12:30pm",
-      "reminder": true
+      "day": "Jan 3rd 2022 at 12:30",
+      "reminder": false
     },
     {
       "id": 2,
       "title": "Teacher Appointment",
-      "day": "Jan 4th at 12:30pm",
-      "reminder": false
+      "day": "Jan 4th 2022 at 16:30",
+      "reminder": true
+    },
+    {
+      "title": "Team Meeting",
+      "day": "Jan 5th 2022 at 11:00",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
