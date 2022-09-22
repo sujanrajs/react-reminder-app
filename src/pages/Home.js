@@ -3,10 +3,10 @@ import AddTask from "../components/AddTask";
 import Header from "../components/Header";
 import Tasks from "../components/Tasks";
 
-// Below given url is for json server deployed in heroku
+// Below given url is for json server deployed in heroku, comment the line while using local json server
 const HerokuUrl = `https://reminder-json-server.herokuapp.com/tasks`;
 
-// Below given url is for local json server, comment above heroku url while using local json server
+// Below given url is for local json server, comment the line while using json server deployed in heroku
 // const LocalUrl = `http://localhost:5000/tasks`;
 
 const Home = () => {
