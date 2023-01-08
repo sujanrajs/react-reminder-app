@@ -3,10 +3,10 @@ import AddTask from "../components/AddTask";
 import Header from "../components/Header";
 import Tasks from "../components/Tasks";
 
-// Below given url is for json server deployed in heroku, comment the line while using local json server
-const HerokuUrl = `https://reminder-json-server.herokuapp.com/tasks`;
+// Below given url is for json server deployed in render, comment the line while using local json server
+const apiUrl = `https://json-server-api-aujh.onrender.com/tasks`;
 
-// Below given url is for local json server, comment the line while using json server deployed in heroku
+// Below given url is for local json server, comment the line while using json server deployed in render
 // const LocalUrl = `http://localhost:5000/tasks`;
 
 const Home = () => {
@@ -21,18 +21,18 @@ const Home = () => {
     getTasks();
   }, []);
 
-  // below this replace HerokuUrl by LocalUrl while running local json server
+  // below this replace apiUrl by LocalUrl while running local json server
 
   // Fetch tasks
   const fetchTasks = async () => {
-    const res = await fetch(HerokuUrl);
+    const res = await fetch(apiUrl);
     const data = await res.json();
     return data;
   };
 
   // Add task
   const addTask = async (task) => {
-    const res = await fetch(HerokuUrl, {
+    const res = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -45,7 +45,7 @@ const Home = () => {
 
   // Delete task
   const deleteTask = async (id) => {
-    await fetch(`${HerokuUrl}/${id}`, {
+    await fetch(`${apiUrl}/${id}`, {
       method: "DELETE",
     });
 
@@ -54,7 +54,7 @@ const Home = () => {
 
   // Fetch task and toggle Reminder
   const fetchTask = async (id) => {
-    const res = await fetch(`${HerokuUrl}/${id}`);
+    const res = await fetch(`${apiUrl}/${id}`);
     const data = await res.json();
     return data;
   };
@@ -66,7 +66,7 @@ const Home = () => {
       reminder: !taskToToggle.reminder,
     };
 
-    const res = await fetch(`${HerokuUrl}/${id}`, {
+    const res = await fetch(`${apiUrl}/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
